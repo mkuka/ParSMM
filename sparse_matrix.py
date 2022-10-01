@@ -5,11 +5,8 @@ Created on Thu Apr  7 18:31:18 2022
 @author: Kuka
 """
 import random
-from scipy.sparse import random
 from scipy import stats
 from numpy.random import default_rng
-from scipy.sparse import csr_matrix
-import numpy as np
 
 class S_matrix:
     def __init__(self, r,c,density):
@@ -55,49 +52,4 @@ class S_matrix:
        
         
        
-        
-       
-        
-    # def __repr__(self):
-    #    return "matrix"
-    # def Compressed_sparse_row(self):
-    #     CSR={}
-    #     M=self.random_matrix()
-        
-    #     rows=np.unique(M.nonzero())
-    #     for r in rows:
-    #         NNZC=np.count_nonzero(M[r])
-    #         for c in NNZC:
-                
-        
-    #             NNZ=np.count_nonzero(M)
-    #     # S=csr_matrix(M)
-        
-        
-    #             CSR[r]=S[r]
-            
-            
-        
-            
-    #     V=[]
-    #     COL_INDEX=[]
-    #     ROW_INDEX=[]
-        
-                
-            
-            
-        
-        
-        
-        
-    #        return csr_matrix(self.random_matrix(), dtype=np.int8)
-    
-    # def multiply(self):
-    #        sparseMatrix_AB = self.Compressed_sparse_row().multiply(self.Compressed_sparse_row())
-    #        return sparseMatrix_AB
-    #    #csr_matrix(self.random_matrix(), dtype=np.int8).toarray()
-           
-                 
-          
-      
-    
+  
