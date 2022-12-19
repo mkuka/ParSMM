@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Thu Apr  7 18:31:18 2022
-
 @author: Kuka
 """
 import random
@@ -12,15 +11,16 @@ class S_matrix:
     def __init__(self, r,c,density):
        self.size = (r,c)
        self.density=density
-       
+
+#generate random matrix
     def random_matrix(self):
         number_non_zero=(int(self.density)/100)
         rng = default_rng()
         rvs = stats.poisson(25, loc=10).rvs
         sparse_matrix = random(self.size[0],self.size[1], density=number_non_zero, random_state=rng, data_rvs=rvs).toarray()
         return sparse_matrix
-     
-        
+
+# vector multiplication
     def matix_vec_mul_original(self,M,v):
         res=[0]*M.shape[0]
         # print(res)
@@ -39,17 +39,3 @@ class S_matrix:
                 res[i]=ans
             # print(res)
         return res
-       
-    
-       
-        
-       
-        
-       
-        
-       
-        
-       
-        
-       
-  
